@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SHE IS WITH JESUS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.8;
+      color: black;
+      background: url("OIP.webp") center/cover no-repeat fixed;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem 2rem;
+      position: relative;
+      z-index: 10;
+      background: url("free.jpg") center/cover no-repeat fixed;
+    }
+
+    .logo img {
+      width: 150px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      margin-right: 30px;
+    }
+
+    nav ul li a {
+      color: black;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.7rem 1.2rem;
+      border-radius: 4px;
+      transition: background 0.3s, transform 0.3s;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      display: inline-block;
+    }
+
+    nav ul li a:hover {
+      background: pink;
+      transform: scale(1.1);
+    }
+
+    #menu-toggle {
+      display: none;
+    }
+
+    .menu-btn {
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      background: #ff69b4;
+      border-radius: 10px;
+      color: white;
+    }
+
+  .back-btn {
+    position: absolute;
+    top: -70px;   
+    left: 0;
+    background: #ff69b4;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: background 0.3s, transform 0.3s;
+  }
+
+  .back-btn:hover {
+    background: #e75480;
+    transform: scale(1.05);
+  }
+
+  .section.first {
+    margin-top: 80px;}
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: transparent;
+        width: 200px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out, background 0.3s ease;
+        text-align: center;
+        padding: 0;
+      }
+
+      #menu-toggle:checked ~ ul {
+        max-height: 500px;
+        background: pink;
+        padding: 0.8rem 0;
+      }
+
+      nav ul li a {
+        padding: 1rem;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .logo img {
+        width: 120px;
+        margin-left: 20px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .logo img {
+        width: 90px;
+        margin-left: 10px;
+      }
+    }
+
+    .container {
+      width: 90%;
+      margin: auto;
+      padding: 40px 0;
+    }
+
+    .section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 60px;
+      gap: 40px;
+      position: relative;
+    }
+
+    .section img {
+      width: 400px;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .section img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    }
+
+    .text {
+      flex: 1;
+      font-size: 20px;
+      text-align: justify;
+    }
+
+    .text h3, .paragraph h3 {
+      font-size: 25px;
+      margin-bottom: 20px;
+      color: #b5486d;
+      text-align: justify;
+    }
+
+    .paragraph {
+      text-align: center;
+      font-size: 20px;
+      margin: 40px 0;
+      line-height: 1.8;
+      padding: 0 50px;
+      text-align: justify;
+    }
+
+    .reverse {
+      flex-direction: row-reverse;
+    }
+    .image-row {
+      display: flex;
+      justify-content: center; 
+      align-items: center;
+      gap: 20px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .image-row img {
+      width: 400px;  
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .image-row img:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .image-row {
+        flex-direction: column; 
+        gap: 15px; 
+    }
+
+      .image-row img {
+        width: 90%;  
+    }
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column;
+        text-align: center;
+      }
+      .reverse {
+        flex-direction: column;
+      }
+      .section img {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        gap: 1rem;
+      }
+
+      nav ul li a {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+      }
+    }
+
+    @media (max-width: 500px) {
+      nav ul {
+        gap: 0.5rem;
+      }
+
+      nav ul li a {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.8rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .menu-btn {
+        font-size: 1.8rem;
+        padding: 0.4rem 0.8rem;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .menu-btn {
+        font-size: 1.5rem;
+        padding: 0.3rem 0.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <img src="hh.png" alt="Site Logo">
+    </div>
+
+    <label for="menu-toggle" class="menu-btn">☰</label>
+    <input type="checkbox" id="menu-toggle">
+
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="lesson.html">Lesson</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+ <div class="container">
+  <div class="section first">
+    <a href="lesson.html" class="back-btn">← Back</a>
+
+    <img src="How To Really Love Yourself/3.jpg" alt="Picture">
+    <div class="text">
+      <h3>Luke 10:27</h3>
+      <p>
+        Sumagot ang lalaki, “Ibigin mo ang Panginoon mong Diyos nang buong puso, buong kaluluwa, buong lakas, at buong pag-iisip;’ at ‘Ibigin mo ang iyong kapwa gaya ng pag-ibig mo sa iyong sarili.’’
+      </p>
+    </div>
+  </div>
+
+    <div class="section reverse">
+      <div class="text">
+      <h3>I. TWO KINDS OF SELF-LOVE</h3>
+      <p>
+        <b style="color: #b5486d;">A. Wrong Kind of Self-Love (sinful)</b> <br> <b>2 Tim. 3:2</b> – self-worship; too much pre-occupation with ourselves or egocentricity</p>
+    </div>
+    </div>
+
+    <div class="section reverse">
+      <img src="How To Really Love Yourself/7.jpg" alt="Picture">
+     <div class="text">
+      <p>
+        <b style="color: #b5486d;">B. Right Kind of Self-Love</b> <br> <b>Luke 10:27b </b>  “...‘Ibigin mo ang iyong kapwa gaya ng pag-ibig mo sa iyong sarili.’’</p>
+    </div>
+    </div>
+
+   <div class="paragraph">
+    <h3>II. REASONS WHY WE NEED TO LOVE OURSELVES PROPERLY</h3>
+      <p>
+        There is no direct command in the Bible that we are to love ourselves. <br> Why? Because it is natural <b>(Eph. 5:28,29,33). </b>
+        <br><br> But there is a command to esteem ourselves properly <b>(Rom. 12:3)</b> </p> <p style="text-indent: 40px;">For by the grace given me I say to every one of you: Do not think of yourself more highly than you ought
+          rather think of yourself with sober judgment, in accordance with the faith God has distributed to each of you.</p>
+          <br> <b style="color: #b5486d;">A. It is the foundation of Christian love</b> <br> “You are able to give to others only when you have a proper and healthy opinion of yourself.”(D.S.) <br>
+          <br> <b style="color: #b5486d;">B. More importantly, it is because God loves us </b> <br>  (Jer. 31:3; Psalm 8:4) <br><br>
+    
+      <h3>III. HOW CAN WE HAVE PROPER SELF-LOVE</h3>
+         <h3 style="font-size:23px;">A. Have a Godly Self-Image and Self-Esteem </h3>  <b>1. Definition of Self-image</b> <br> - the unconscious and conscious feelings you have about yourself (C.O.) <br> - based on a whole system of pictures and feelings you have put together about yourself (D.S.)
+         <br> <br> <b>2. Development of Self-Image</b> <br> “The ideas of ourselves which our parents and other earthly authority figures gave us have a great deal to do with our self-image…but it was not simply what they did but how (one) reacted to them that determined (one’s self-image) (C.O.)”
+   </div> 
+
+<div class="text">
+  <p> 
+    <b>3. Steps to Having a Godly Self-Image</b> <br> 
+    a. Know your True Identity from God’s Word 
+  </p>
+
+  <div class="image-row">
+    <img src="How To Really Love Yourself/17.jpg" alt="Picture">
+    <img src="How To Really Love Yourself/18.jpg" alt="Picture">
+  </div>
+</div>
+
+  <div class="section first">
+  <img src="How To Really Love Yourself/20.jpg" alt="Picture">
+    <div class="text">
+      <h3>3.1. You are God’s Special Creation</h3>
+      <p>
+       <b> Gen. 1:27,31</b> – created in His image; created with a moral faculty, power of abstract thought and spiritual nature <br>
+       <b> Ps. 139:14</b> – created uniquely and wonderfully 
+      </p>
+    </div>
+  </div>
+
+     <div class="section reverse">
+      <img src="How To Really Love Yourself/23.jpg" alt="Picture">
+  <div class="text">
+ <p><br>
+       <b>Gen. 1:28; Isaiah 43:7; 1 Pet. 4:10-11</b> – created with a purpose: to rule over God’s creation and give Him glory through fulfilling the special work He has designed for you but most of all to know Him and enjoy fellowship with Him</p>
+  </div>
+  </div>
+         
+ <div class="section first">
+  <img src="How To Really Love Yourself/29.jpg" alt="Picture">
+    <div class="text">
+      <h3> 3.2. You are God’s Masterful Recreation</h3>
+      <p>
+       <b>  Eph. 2:10</b> – God’s workmanship (from where we derive the word “poem”; masterpiece), created in Christ Jesus to do good works <br>
+        We are being re-created into the very likeness of Jesus Christ<b> (Rom. 8:28, 29)</b> <br> <br>
+        So there is no “universal ideal” in outward beauty or appearance but in inward beauty or character <b>(1 Sam. 16:7; 1 Peter 3:4).</b> 
+
+      </p>
+    </div>
+  </div>
+
+ <div class="paragraph">
+  <b style="color: #b5486d;"> Keep yourself from the unhealthy practice of comparing yourself with others. Compare yourself with Christ. </b> <br>
+<b>Moses: </b>changed from being a fearful, insecure person into a confident but meek person <b>(Numbers 12:3).</b> 
+<br><br>
+<b style="color: #b5486d;"> b. Know Your True Worth in God’s Eyes</b> <br> You are <b style="color:#b5486d;">PRICELESS </b> (valuable, important, precious).
+<br>  - more valuable than the world <b>(Mark 8:36)</b> <br> - so priceless that it cost God His own precious Son to redeem you <b>(1 Pet. 1:15,16)</b>
+ </div>
+
+   <div class="section first">
+  <img src="How To Really Love Yourself/40.jpg" alt="Picture">
+    <div class="text">
+<h3 style="font-size: 23px;">B. Have a Godly Self-Acceptance and Self-Respect</h3>
+<p><b>1. Appreciate your strengths and thankfully accept your weaknesses</b> <br> <b>a. Strengths</b> – abilities and gifts (Rom. 12:6-8; 1 Cor. 12:4-11; 1 Pet. 4:10-11) <br> You need to discover, use (to serve others) and develop your spiritual gifts.
+<br> <b>b. Weaknesses</b>– inabilities; not sinful; do not see them as spiritual handicaps 
+(2 Cor. 12:9)</p> </div></div>
+
+
+ <div class="paragraph">
+  <h3>If God accepts you (Rom. 15:7), who are you not to accept ourselves?</h3>
+  <p><b>2. Be engaged in a spiritual growth process</b><br>This growth occurs as you allow God to shape your personal life through trials, making you even more capable of accomplishing future assignments 
+<b>(Rom. 5:2-4)</b> <br><br> Constantly seek victory over your personal sins. Overcome sin with <b>prayer,</b> the Word and planned behavior, not giving in to discouragement or self-punishment. <br><br> 
+ <b>Moses</b> encountered many trials that developed his faith in God. He had struggles with self-control. But <b>he had constant communion with God</b> and <b>growing knowledge of His Word.</b></p>
+<h3>If God is patiently working in you, who are you to easily give up on yourself?</h3>
+</div>
+
+   <div class="section reverse">
+      <img src="How To Really Love Yourself/48.jpg" alt="Picture">
+     <div class="text">
+<b>3. Continually forgive yourself of ever sin, mistake or failure</b> (Rom. 8:1,34; 1 John 3:19-21) 
+<h3>If God forgives you (1 Jn. 1:9), who are you not to forgive yourself?</h3>
+</div></div>
+
+ <div class="paragraph">
+  <b>4. Do take care of your legitimate needs (not wants).</b> <br> <b>Moses: </b>accepted Jethro’s advice to delegate <b>(Exo. 18:13-26).</b> <br> Jesus and his disciples: <b>Mark 6:31</b>
+  <h3>If God cares for you, who are you not to care for yourself?</h3>
+  <br>  </div>
+
+  <h2>IV. APPLICATION</h2>
+  <b style="font-size: 20px;" >Do you already know you’re true identity not only as a person but as a redeemed person?<br>
+  What new thought have you learned about yourself that you need to constantly remind yourself of?<br>
+  What steps can you take to grow in self-acceptance?</b><br>
+</body>
+</html>

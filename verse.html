@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SHE IS WTH JESUS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.8;
+      color: black;
+      background: url("OIP.webp") center/cover no-repeat fixed;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem 2rem;
+      position: relative;
+      z-index: 10;
+      background: url("free.jpg") center/cover no-repeat fixed;
+    }
+
+    .logo img {
+      width: 150px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      margin-right: 30px;
+    }
+
+    nav ul li a {
+      color: black;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.7rem 1.2rem;
+      border-radius: 4px;
+      transition: background 0.3s, transform 0.3s;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      display: inline-block;
+    }
+
+    nav ul li a:hover {
+      background: pink;
+      transform: scale(1.1);
+    }
+
+    #menu-toggle {
+      display: none;
+    }
+
+    .menu-btn {
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      background: #ff69b4;
+      border-radius: 10px;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: transparent;
+        width: 200px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out, background 0.3s ease;
+        text-align: center;
+        padding: 0;
+      }
+
+      #menu-toggle:checked ~ ul {
+        max-height: 500px;
+        background: pink;
+        padding: 0.8rem 0;
+      }
+
+      nav ul li a {
+        padding: 1rem;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .logo img {
+        width: 120px;
+        margin-left: 20px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .logo img {
+        width: 90px;
+        margin-left: 10px;
+      }
+    }
+
+    .container {
+      width: 90%;
+      margin: auto;
+      padding: 40px 0;
+    }
+
+    .section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 60px;
+      gap: 40px;
+      position: relative;
+    }
+
+    .section img {
+      width: 400px;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .section img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    }
+
+    .text {
+      flex: 1;
+      font-size: 20px;
+      text-align: justify;
+    }
+
+    .text h3, .paragraph h3 {
+      font-size: 25px;
+      margin-bottom: 20px;
+      color: #b5486d;
+      text-align: justify;
+    }
+
+    .paragraph {
+      text-align: center;
+      font-size: 20px;
+      margin: 40px 0;
+      line-height: 1.8;
+      padding: 0 50px;
+      text-align: justify;
+    }
+
+    .reverse {
+      flex-direction: row-reverse;
+    }
+    .image-row {
+      display: flex;
+      justify-content: center; 
+      align-items: center;
+      gap: 20px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .image-row img {
+      width: 400px;  
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .image-row img:hover {
+      transform: scale(1.05);
+    }
+
+  @media (max-width: 768px) {
+    .image-row {
+      flex-direction: column; 
+      gap: 15px; 
+  }
+
+    .image-row img {
+      width: 90%;  
+  }
+  }
+
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column;
+        text-align: center;
+      }
+      .reverse {
+        flex-direction: column;
+      }
+      .section img {
+        width: 100%;
+      }
+    }
+
+  .back-btn {
+    position: absolute;
+    top: -70px;   
+    left: 0;
+    background: #ff69b4;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: background 0.3s, transform 0.3s;
+  }
+
+  .back-btn:hover {
+    background: #e75480;
+    transform: scale(1.05);
+  }
+
+  .section.first {
+    margin-top: 80px;}
+
+      @media (max-width: 768px) {
+    nav ul {
+      gap: 1rem;
+    }
+
+    nav ul li a {
+      font-size: 0.9rem;
+      padding: 0.6rem 1rem;
+    }
+  }
+
+  @media (max-width: 500px) {
+    nav ul {
+      gap: 0.5rem;
+    }
+
+    nav ul li a {
+      font-size: 0.8rem;
+      padding: 0.5rem 0.8rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .menu-btn {
+      font-size: 1.8rem;
+      padding: 0.4rem 0.8rem;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .menu-btn {
+      font-size: 1.5rem;
+      padding: 0.3rem 0.6rem;
+    }
+  }
+</style>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <img src="hh.png" alt="Site Logo">
+    </div>
+
+    <label for="menu-toggle" class="menu-btn">☰</label>
+    <input type="checkbox" id="menu-toggle">
+
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="lesson.html">Lesson</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+ <div class="container">
+  <div class="section first">
+    <a href="lesson.html" class="back-btn">← Back</a>
+
+    <img src="What The Church Needs Now/2.jpg" alt="Picture">
+    <div class="text">
+      <h3>I. Background</h3>
+      <p>
+        “Paul wrote this passage in response to disruptions that arose in the church of Corinth regarding spiritual gifts. <br> To correct the church’s misguided views of spiritual gifts and its over-all destructive way of behaving, Paul promised to show the Corinthians ‘a more excellent way’”(Alexander Strauch). That way is LOVE.
+      </p>
+    </div>
+  </div>
+
+    <div class="paragraph">
+      <h3>II. The Necessity of Love vv. 1-3</h3>
+      <p>
+        <b style="color: #b5486d;">A. It is necessary in the exercise of spiritual gifts (vv.1-2)</b> <br><br> <b style="color: #b5486d;">1. Speaking in the tongues of men and angels (v.1)</b> <br> – “If I speak…but have no love, I am only a resounding gong or a clanging cymbal” (v.1)
+        <br> <b style="color: #b5486d;">2. Gift of Prophecy and can fathom all mysteries and all knowledge (v.2)</b> <br> – Example: A pastor who had a phenomenal knowledge of the Bible
+        <br> <b style="color: #b5486d;">3. Faith that can move mountains (v.2)</b> <br> “…but have not love, I am nothing”.
+      </p>
+    </div>
+
+    <div class="section reverse">
+    <img src="What The Church Needs Now/13.jpg" alt="Picture">
+     <div class="text">
+      <p> 
+        <br> <b style="color: #b5486d;">B. It is necessary in making great sacrifices (v.3)</b> <br><br> <b style="color: #b5486d;">1. Giving all to the poor</b> <br> Example: Ananias and Sapphira <b>(Acts 5:1-11)</b>
+        <br> <b style="color: #b5486d;">2. Martyrdom</b> <br> “…but have not love, I gain nothing”.</p>
+      </p> 
+    </div>
+    </div>
+
+      <div class="image-row">
+    <img src="What The Church Needs Now/14.jpg" alt="Picture">
+    <img src="What The Church Needs Now/16.jpg" alt="Picture">
+    <img src="What The Church Needs Now/18.jpg" alt="Picture">            
+  </div>
+
+   <div class="paragraph">
+    <h3>III. The Nature (Qualities) Of Love</h3>
+      <p>
+         Paul lists fifteen positive and negative descriptions of love. In the Greek text, all of these descriptions are verbs. They beautifully portray the character and behavior of the <b>Lord Jesus Christ.</b> <br>
+        <br> <b style="color: #b5486d;">A. What It Is and What It Does (Positive Descriptions)</b> <br> 
+        <b style="color: #b5486d;">1. Patient (v. 4) </b> <br>  - Denotes “longsuffering” or “forbearance”, particularly in respect to personal injuries or wrongs suffered<br>
+        It does not seek to retaliate. It is not quick to anger.<br>God Himself is the supreme example of longsuffering. <br><br>
+        <b>Peter’s Question – Matthew 18:21-22</b><br> “Being patient doesn’t imply passivity or a refusal to confront people’s sins or problems.”
+      </p> 
+    </div> 
+
+    <div class="section reverse">
+    <img src="What The Church Needs Now/26.jpg" alt="Picture">
+     <div class="text">
+      <p> 
+        <br> <b style="color: #b5486d;">2. Kind (v.4)</b> <br> -always looking out for opportunities to do something good for others <br> “Kindness is a readiness to do good, to help, to relieve burdens, to be useful, to serve, to be tender, to be sympathetic to others.”
+        <br>  <b>Example: </b> Jesus – Acts 10:38 and David – 2 Samuel 9 (esp. vv. 1,7)
+      </p> 
+    </div>
+    </div> 
+
+  <div class="section first">
+    <img src="What The Church Needs Now/29.jpg" alt="Picture">
+    <div class="text">
+      <p>
+        <b style="color: #b5486d;">3. Rejoices with the Truth (v.6)</b> <br> - takes great pleasure when truth (righteous behavior or principles of conduct that corresponds to the truth of the gospel message) prevails
+      <br> - The apostle John over Gaius <b>(3 John 3-6; 2 John 4)</b>
+      </p>
+    </div>
+  </div>
+
+  <div class="paragraph">
+    <p>
+      <b style="color: #b5486d;">4. Always Protects (v.7)</b> <br>- bears all things, slow to expose, always covers up <br> - does not talk about the mistakes of others but knows how to be silent
+      <br><br> <b>1 Peter 4:8</b> - bears up under the heavy load of life’s problems and sufferings <br> It holds steadfast and remains strong despite opposition, deprivation and hard work.
+    <br><br><b style="color: #b5486d;">5. Always Trusts (v.7)</b> <br> - believes all things (not being naïve, gullible) <br> - believes people can change and improve; it sees their worth, potential and future possibilities (not credulous or blind) 
+    <br> - not suspicious; gives others the benefit of the doubt <br><b>Positive Example:</b> Jesus’ dealings with the Twelve
+    <br><br> <b style="color: #b5486d;">6. Always Hopes (v.7)</b> <br> -being optimistic about its object <br> <b>Positive Example:</b> Paul - 2 Cor. 7:16
+    <br> This confidence is not a sentimental wish; it is faith in God’s ultimate triumph and good intentions for His people. 
+  </p>
+  </div>
+
+    <div class="section reverse">
+    <img src="What The Church Needs Now/38.jpg" alt="Picture">
+     <div class="text">
+      <p> 
+        <br> <b style="color: #b5486d;">7. Always Perseveres (v.7)</b> <br> - can stand anything; strong and tenacious; holds out; never gives up
+      </p> 
+    </div>
+    </div> 
+    
+  <div class="paragraph">
+    <p>
+      The people repeatedly complained about his leadership. <br> See: <b>Exo. 14;11-12; 16:2-3; 17:2-4; Num. 14:3-4; 20: 5; 12; 16:3,13-14</b>
+      <br>  On 4 different occasions God was about to destroy the whole nation but Moses prayed and pleaded with God to spare them. 
+
+      <br><br><b style="color: #b5486d;">B. What’s It’s Not and What It Doesn’t Do (Negative Descriptions)</b>
+      <br> <b style="color: #b5486d;">1. Does Not Envy (or Not Jealous) (v.4)</b><br> - Does not covet others’ gifts, possessions or positions of influence <br> - Envy makes one resentful of others’ good fortune.
+    <br> <b>Negative Example: </b> King Saul – 1 Samuel 18:6-9 <br><b>Positive Example: </b> George Muller</b> <br><br>  “When… I saw how some preferred my beloved friend’s ministry to my own, I determined, in the strength of God, to rejoice in this, instead of envying him…” <br><br>…but rejoices in others.
+    <br><br> <b style="color: #b5486d;">2. Does Not Boast (v. 4)</b> <br> - Does not brag <br> “Braggarts crave attention. They want others to praise their abilities, knowledge, successes and even their sufferings for God. Because they desire attention, they speak too highly and too much of themselves, although they may have nothing significant to say”.
+    <br><br> <b>Negative Example: </b> the Pharisees – John 12:43; Matt. 6:5; 23:6 <br>
+    Proverbs 27:2 …but promotes and praises others.<br><b>Positive Example:</b> <br> Billy Graham (on board a ship on his way to the London Crusade) and a missionary to Africa “Pray that I will be a humble man”.
+    <br><br> <b style="color: #b5486d;"> 3. Not Proud (v.4)</b> <br> - Not arrogant, puffed up, inflated, conceited, self-important (“pa-importante”)
+  </p>
+  </div>
+
+  <div class="section first">
+    <img src="What The Church Needs Now/53.jpg" alt="Picture">
+    <div class="text">
+      <p>
+         <b>Negative Example: </b> <br> the Pharisees – Luke 18:11; and  Diotrephes (3 John 9-10) <br> “Those who think too much of themselves don’t think enough” (Amy Carmichael).       
+         <br> <br> Illustration: President of a seminary …but is humble and modest.
+      </p>
+    </div>
+  </div>
+
+  <div class="paragraph">
+    <p>
+      <b style="color: #b5486d;"> 4. Not Rude (v.5)</b> <br> - does not act disgracefully, contrary to established standards of proper conduct and decency 
+      <br> <b>Negative Example:</b> the church at Corinth (1 Cor. 11:21-22,33; 8; 14:40) <br> …but promotes proper decorum
+      <br><br> - being sensitive to proper social relationships, public decency, social convention, politeness, tact and proper conduct in dress, speech and action
+    <br> <b>Example:</b> Wearing the proper dress at church and not talking on a cellphone  during church services
+    <br><br> <b style="color: #b5486d;">5. Not Self-seeking (v.5)</b> <br> - does not insist on its own way, not selfish <br>- being able to give in graciously, give way to another and submit to one another
+    <br> <b>Positive Example:</b> Jesus Christ – Rom. 15:3; Luke 22:27, Paul – 1 Cor. 10:33; 9:19 <br>
+    <b>Negative Example:</b> the Corinthian believers (1 Cor. 8:13; Rom. 14:15). <br> - but is occupied with others
+  </p>
+  </div>
+
+    <div class="section reverse">
+    <img src="What The Church Needs Now/65.jpg" alt="Picture">
+     <div class="text">
+      <p> 
+        <br> <b style="color: #b5486d;">6. Not Easily Angered (v.5)</b> <br> - not irritable, not easily provoked to an emotional state of anger
+        <br><b>Negative Example:</b> A pastor and the server who poured water over his suit <br> …but is calm and slow to anger
+      </p> 
+    </div>
+    </div> 
+
+  <div class="paragraph">
+    <p>
+      <b style="color: #b5486d;">7. Keeps No Record of Wrongs (v.5)</b> <br> - not resentful <br> - does not hold grudges or seek revenge <br> - does not keep books on evil with a view to paying back injury
+    <br> <b>Negative Example:</b> Robert Cleaver Chapman and the grocer</b> <br> …but forgives <b>(Rom. 12:14,19-21; Eph. 4:32-5:2)</b>
+      <br> <b>Positive Example:</b>David – 2 Samuel 1:12, Jesus – Luke 23:34</b> 
+      <br><br><b style="color: #b5486d;">8. Does not Delight in Evil (v.6)</b> <br> - does not rejoice at wrongdoing (Rom. 12:9)
+      <br> - does not take pleasure in feelings of superiority over others, do not delight in juicy gossip nor find satisfaction in hearing about the sordid sins and demise of (Christians) they don’t like, <br><br> not gloat over scandals, cannot feel glad when calamity strikes in a nation they despise
+    <br><b>Positive Example:</b> Job – Job 31:29
+
+    <br><br> Put your name in the place of <b style="color: #b5486d;">Love</b> in vv.4-7. <br> How do you feel?<br>
+   Then put <b style="color: #b5486d;">“Christ in me“ </b>in the place of Love. <br> 2 Cor. 13:5; Col. 1:27; Gal. 2:20.<br><br> 
+
+   <h3>IV. THE NOTABILITY OF LOVE (vv.8-13)</h3>
+   <b style="color: #b5486d;">A. Its Permanence (vv.8-12)</b><br> “Love never fails” - never ends, loses, becomes inefficient or ineffective (takes no effect) <br> - unlike spiritual gifts (vv.8-9)
+   <br><b>Clarification: </b> <b style="color: #b5486d;">Perfection</b> – refers to Jesus Christ not the Bible <br><br>
+   <b style="color: #b5486d;">B. Its Prominence (v.13)</b><br> “…these three remain: faith, hope and love. But the greatest of these is LOVE”.
+      <br><br>
+   <h3>V. APPLICATION</h3>
+    Allow this message to speak to you. Do not use it to tell other people they have no love. We should judge ourselves first.  
+     <br> Let us confess and repent of our own sins of lovelessness. Then and only then can we begin to help others to love. <br>Pray for them because only God can change hearts.
+    </p>
+  </div>
+  </div>
+</body>
+</html>

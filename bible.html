@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SHE IS WTH JESUS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.8;
+      color: black;
+      background: url("OIP.webp") center/cover no-repeat fixed;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem 2rem;
+      position: relative;
+      z-index: 10;
+      background: url("free.jpg") center/cover no-repeat fixed;
+    }
+
+    .logo img {
+      width: 150px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      margin-right: 30px;
+    }
+
+    nav ul li a {
+      color: black;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.7rem 1.2rem;
+      border-radius: 4px;
+      transition: background 0.3s, transform 0.3s;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      display: inline-block;
+    }
+
+    nav ul li a:hover {
+      background: pink;
+      transform: scale(1.1);
+    }
+
+    #menu-toggle {
+      display: none;
+    }
+
+    .menu-btn {
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      background: #ff69b4;
+      border-radius: 10px;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: transparent;
+        width: 200px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out, background 0.3s ease;
+        text-align: center;
+        padding: 0;
+      }
+
+      #menu-toggle:checked ~ ul {
+        max-height: 500px;
+        background: pink;
+        padding: 0.8rem 0;
+      }
+
+      nav ul li a {
+        padding: 1rem;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .logo img {
+        width: 120px;
+        margin-left: 20px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .logo img {
+        width: 90px;
+        margin-left: 10px;
+      }
+    }
+
+    .container {
+      width: 90%;
+      margin: auto;
+      padding: 40px 0;
+    }
+
+    .section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 60px;
+      gap: 40px;
+      position: relative;
+    }
+
+    .section img {
+      width: 400px;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .section img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    }
+
+    .text {
+      flex: 1;
+      font-size: 20px;
+      text-align: justify;
+    }
+
+    .text h3, .paragraph h3 {
+      font-size: 25px;
+      margin-bottom: 20px;
+      color: #b5486d;
+      text-align: justify;
+    }
+
+    .paragraph {
+      text-align: center;
+      font-size: 20px;
+      margin: 40px 0;
+      line-height: 1.8;
+      padding: 0 50px;
+      text-align: justify;
+    }
+
+    .reverse {
+      flex-direction: row-reverse;
+    }
+    .image-row {
+      display: flex;
+      justify-content: center; 
+      align-items: center;
+      gap: 20px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .image-row img {
+      width: 400px;  
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+      margin-bottom: 1rem;
+    }
+
+    .image-row img:hover {
+      transform: scale(1.05);
+    }
+
+  @media (max-width: 768px) {
+    .image-row {
+      flex-direction: column; 
+      gap: 15px; 
+  }
+
+    .image-row img {
+      width: 90%;  
+  }
+  }
+
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column;
+        text-align: center;
+      }
+      .reverse {
+        flex-direction: column;
+      }
+      .section img {
+        width: 100%;
+      }
+    }
+
+  .back-btn {
+    position: absolute;
+    top: -70px;   
+    left: 0;
+    background: #ff69b4;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: background 0.3s, transform 0.3s;
+  }
+
+  .back-btn:hover {
+    background: #e75480;
+    transform: scale(1.05);
+  }
+
+  .section.first {
+    margin-top: 80px;}
+
+@media (max-width: 768px) {
+  nav ul {
+    gap: 1rem;
+  }
+
+  nav ul li a {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  nav ul {
+    gap: 0.5rem;
+  }
+
+  nav ul li a {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    font-size: 1.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .menu-btn {
+    font-size: 1.5rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <img src="hh.png" alt="Site Logo">
+    </div>
+
+    <label for="menu-toggle" class="menu-btn">☰</label>
+    <input type="checkbox" id="menu-toggle">
+
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="lesson.html">Lesson</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+ <div class="container">
+  <div class="section first">
+    <a href="lesson.html" class="back-btn">← Back</a>
+
+    <img src="Returning To Our First Love/2.jpg" alt="Picture">
+    <div class="text">
+      <p>
+        Oh, to grace how great a debtor Daily I'm constrained to be! Let thy grace, Lord, like a fetter, Bind my wand'ring heart to Thee: Prone to wander, Lord, I feel it, Prone to leave the God I love.
+        <br>Here's my heart, Lord, take and seal it, Seal it for Thy courts above.
+      </p>
+    </div>
+  </div>
+
+  
+    <div class="paragraph">
+      <h3>I. THE LOVER AND THE BELOVED vv. 1a, 7a</h3>
+      <p>
+        <b style="color: #b5486d;">A. The Address</b> <br> <b>2 Tim. 3:2</b> “…to the angel of the church of Ephesus” (v.1a) <br> “…the Spirit says to the churches” (v.7a)
+        <br><br><b> Angel</b> <br> - messenger, guardian or representative <br> - most likely an elder or pastor of the local church
+        <br><b> Church of Ephesus</b> <br> - actual local church at Ephesus ( Background: Acts 18:18-21; 19) <br> - ekklesia - people who have been called out (of sin and the world) = believers in Christ
+    </div>
+
+    <div class="section reverse">
+      <img src="Returning To Our First Love/6.jpg" alt="Picture">
+      <div class="text">
+      <p>
+       <b>Ephesus</b><br> - capital of Asia Minor and is one of the influential cities in the eastern part of the Roman Empire. The temple of Artemis was located in this city.
+       <br><br> <b>Church (Universal Body of Christ)</b> <br> - the Bride of Christ ( 2 Cor. 11:2; Eph. 5:25-27; Rev. 19:7), the Beloved
+      </p>
+  </div>
+  </div>  
+
+    <div class="paragraph">
+      <p>
+        <b style="color: #b5486d;">B. The Source - Jesus Christ (v.1b) </b> 
+        <br><b>1. He is Sovereign and is our Sustainer</b> <br> “…holds the seven stars in his right hand” (cf Rev. 1:20 - angels)
+        <br><b>2. He is Present and is our Companion</b> <br> “…walks among the seven golden lampstands” (cf Rev. 1:20 – churches) More than that, He is our Lover, the Bridegroom. 
+    </p>
+    </div>
+
+    <div class="paragraph">
+      <h3>II. THE LOVER’S COMMENDATION VV. 2-3, 6</h3>
+      <p>
+        <b style="color: #b5486d;">A. Their Deeds or Good Works -v.2a</b> 
+        <br><b>B. Their Hard Work- v. 2a</b> <br>  - “toil resulting in weariness, troubles”
+        <br><b>C. Perseverance – vv. 2a,3</b> <br> - the ability to progress inspite of adversity
+        <br><b>D. Endurance – v.3</b> <br> - the ability to stand up under adversity
+        <br><b>E. Non-compromising Stance – vv. 2b, 6</b> <br> “…You cannot tolerate wicked people (false apostles)…” -v. 2b (cf Acts 20:29-31) <br> “…You hate the practices of the Nicolaitans…” – v. 6
+        <br><br> <b>Nicolaitans</b> <br> - seem to have advocated compromise with the power of paganism for the Christian under pressure (New Bible Dictionary)
+      </p>
+    </div>
+
+    <div class="section first">
+    <img src="Returning To Our First Love/16.jpg" alt="Picture">
+    <div class="text">
+      <h3>III. THE LOVER’S COMPLAINT v.4</h3>
+      <p>
+        <b style="color: #b5486d;">A. The Complaint: Waning Love</b><br>
+        <b>NIV – “…you have forsaken the love you have at first”. <br>
+          KJV – “…thou has left thy first love”. <br>
+          NLT – “…You don’t love me or each other as you did at first!”.</b><br><br>
+        Could be that God is not anymore first in their lives or their hearts have grown cold. What is most important to God: Our Heart, our Love.   
+      </p>
+    </div>
+  </div>
+
+    <div class="section reverse">
+      <img src="Returning To Our First Love/18.jpg" alt="Picture">
+      <div class="text">
+      <p>
+       <b style="color: #b5486d;">B. Possible Reasons</b><br><b>1. Busyness with other things (even ministry) </b>- distracted like Martha
+       <br><b>2. Trials</b> - sometimes causes us to doubt God’s goodness and love
+       <br><b>3. Increase of knowledge to refute error</b> “In the first steps of your Christian life, you may have had enthusiasm without knowledge.
+      </p>
+  </div>
+  </div>    
+
+    <div class="paragraph">
+        <h3>Do you now have knowledge without enthusiasm?</h3>
+        Both are necessary if we are to keep our love for God intense and untarnished…” (NLT) <br>
+        <b>There is a difference between knowing about God and knowing God.</b>   
+    </div>
+
+      <div class="text">
+      <p>
+        <b style="color: #b5486d; font-size: 25px">IV. THE LOVER’S COUNSEL  vv. 5b, 7b </b><br>
+        - given out of love (Heb. 12:5,6) <br><br>
+       <b style="color: #b5486d;">A. Remember – v. 5a </b><br> - your early days as a Christian   cf. Eph. 1:15; Heb. 10:32  
+       <br><b>KJV </b>– “Remember therefore from whence thou art fallen…” <br> <b>NIV</b>– “Consider how far you have fallen!...”
+      </p>
+      <div class="image-row">
+    <img src="Returning To Our First Love/23.jpg" alt="Picture">
+    <img src="Returning To Our First Love/24.jpg" alt="Picture">
+    <img src="Returning To Our First Love/25.jpg" alt="Picture">
+  </div>
+  </div>
+
+  <div class="section reverse">
+      <img src="Returning To Our First Love/27.jpg" alt="Picture">
+      <div class="text">
+        <h3></h3>
+      <p>
+       <b>B. Repent – v. 5a</b><br> - “to change one’s mind or purpose” <br> - of coldness of heart and what actions caused it
+       <br><b>C. Revive – v. 5a</b> <br> - “do the things you did at first” <br> - Go back to the basics: Praise & Worship (Love Songs to the Lord), Prayer, Word, Fellowship, Witnessing
+      </p>
+  </div>
+  </div> 
+  <div class="paragraph">
+    <b>D. Take Heed of Two Things – vv.5b, 7b</b> <br><br>
+    <b>1. A Warning</b> <br> - “If you do not repent, I will come to you and remove your lampstand from its place.” (v. 5b) <br> - loss of influence; would cease to be an effective church <br>
+    <b>2. A Promise</b> <br> - “To the one who overcomes, I will give the right to eat from the tree of life, which is in the paradise of God.” (v. 7b) <br> - probably set against the background of the sacred date-palm of Artemis which figures on Ephesian coins (NBD) 
+  </div>
+
+  <div class="paragraph">
+    <h3>V. Application</h3>
+    <b>What is the condition of your heart? Are you still very much in love with Jesus? <br> If not, heed your Lover’s counsel. </b>
+  </div>
+</body>
+</html>

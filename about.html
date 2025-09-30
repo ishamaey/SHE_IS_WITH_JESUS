@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SHE IS WTH JESUS</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: url("free.jpg") center/cover no-repeat fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.logo img {
+  width: 150px;
+  max-width: 100%;
+  height: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-right: 30px;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.7rem 1.2rem;
+  border-radius: 4px;
+  transition: background 0.3s, transform 0.3s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  display: inline-block;
+}
+
+nav ul li a:hover {
+  background: pink;
+  transform: scale(1.1);
+}
+
+#menu-toggle { display: none; }
+
+.menu-btn {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  background: #ff69b4;
+  border-radius: 10px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: pink;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    text-align: center;
+  }
+
+  #menu-toggle:checked ~ ul {
+    max-height: 500px;
+    padding: 0.8rem 0;
+  }
+
+  .menu-btn { display: block; }
+}
+
+    @media (max-width: 768px) {
+  .logo img {
+    width: 120px;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .logo img {
+    width: 90px;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    gap: 1rem;
+  }
+
+  nav ul li a {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  nav ul {
+    gap: 0.5rem;
+  }
+
+  nav ul li a {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    font-size: 1.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .menu-btn {
+    font-size: 1.5rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.hero img {
+  flex: 1 1 300px;
+  max-width: 320px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  object-fit: cover;
+  margin-right: 2rem; 
+}
+
+.hero-text {
+  flex: 2 1 500px;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  color: #b5486d;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero img {
+    margin: 0 0 1.5rem 0; 
+    max-width: 250px;
+  }
+
+  .hero-text {
+    flex: unset;
+    padding: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .hero img {
+    max-width: 200px;
+  }
+}
+
+.about-me, .skills, .projects, .website-info, .contact {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+h2 {
+  color: #b5486d;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.skill { margin-bottom: 1rem; }
+.skill h3 { margin-bottom: 0.5rem; }
+
+.progress-bar {
+  background: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 12px;
+}
+
+.progress {
+  height: 12px;
+  background: #b5486d;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.project-card {
+  background: #ffe4ec;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.8rem;
+}
+
+.contact p { margin-bottom: 0.5rem; }
+
+.social-links a {
+  margin: 0 0.5rem;
+  color: #b5486d;
+  font-size: 1.4rem;
+  transition: color 0.3s;
+}
+
+.social-links a:hover { color: #333; }
+
+@media(max-width: 768px) {
+  .projects-grid { grid-template-columns: 1fr; }
+  h2 { font-size: 1.5rem; }
+}
+
+@media(max-width: 500px) {
+  .container { padding: 1rem; }
+  .project-card { padding: 0.8rem; }
+}
+
+.btn-message {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background: #b5486d;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background 0.3s, transform 0.3s;
+}
+
+.btn-message:hover {
+  background: #ff69b4;
+  transform: scale(1.05);
+}
+</style>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <img src="hh.png" alt="Site Logo">
+    </div>
+
+    <label for="menu-toggle" class="menu-btn">☰</label>
+    <input type="checkbox" id="menu-toggle">
+
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="lesson.html">Lesson</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+   <div class="container">
+      <section class="hero">
+        <img src="my.jpg" alt="Developer Photo">
+        <div class="hero-text">
+          <h1>Hello, I’m Bacolina, Threcia</h1>
+          <p>A passionate Web Developer who loves creating modern, responsive, and user-friendly websites.</p>
+          <a href="contact.html" class="btn-message">Message Me</a>
+        </div>
+      </section>
+
+      <section class="about-me">
+        <h2>About Me</h2>
+        <p>Hello! I’m Bacolina, Threcia T., a creative and detail-oriented web developer. 
+        I specialize in designing and coding websites that balance beauty and functionality. 
+        I’m passionate about learning new technologies and using them to solve real-world problems.
+        </p>
+      </section>
+
+      <section class="website-info">
+        <h2>About This Website</h2>
+        <p>
+        <b style="color: #b5486d;">SHE IS WITH JESUS</b> is a place where you can learn lessons 
+        about love, faith, and self-worth through God’s Word.  
+        Each lesson is created to help you grow spiritually, 
+        understand God’s heart, and apply His truth in your daily life.  
+          <br><br>
+        This website is designed to be <b>simple, modern, and responsive</b> so 
+        that you can easily access Bible lessons, and 
+        inspirational content anytime—whether you’re on a computer, tablet, or phone.
+      </p>
+      </section>
+
+      <section class="skills">
+        <h2>My Skills</h2>
+        <div class="skill">
+          <h3>HTML, CSS, JavaScript</h3>
+            <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+        </div>
+        <div class="skill">
+          <h3>Responsive Design</h3>
+            <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+        </div>
+        <div class="skill">
+          <h3>React & Frontend Frameworks</h3>
+            <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+        </div>
+        <div class="skill">
+          <h3>UI/UX Design</h3>
+            <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
+        </div>
+      </section>
+
+      <section class="projects">
+        <h2>Latest Projects</h2>
+          <div class="projects-grid">
+            <div class="project-card">
+            <img src="las2.png" alt="Project 1">
+            <h3>Portfolio Website</h3>
+            <p>A responsive personal portfolio showcasing my web development journey.</p>
+            </div>
+            <div class="project-card">
+            <img src="las3.png" alt="Project 2">
+            <h3>Blog Platform</h3>
+            <p>A simple blogging platform built with HTML, CSS, and JavaScript.</p>
+            </div>
+            <div class="project-card">
+            <img src="las1.png" alt="Project 3">
+            <h3>E-commerce Demo</h3>
+            <p>A mock online store featuring product listings and a shopping cart.</p>
+            </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <p><strong>Email:</strong> threciabacolina.com</p>
+        <p><strong>Location:</strong> Las Piñas City, Philippines</p>
+        <div class="social-links">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+        <a href="contact.html" class="btn-message" style="color: white;">Message Me</a>
+      </section>
+    </div>
+</body>
+</html>

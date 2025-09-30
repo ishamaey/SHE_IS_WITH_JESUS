@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+</head>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('1.jpg') center/cover no-repeat;
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    width: 350px;
+    background:url(eh.jpg) center/cover no-repeat;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+  .bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(8px);
+    z-index: -1;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 0px;
+    color: black;
+  }
+  .bio{
+    font-size: small;
+    text-align: center;
+    color: black;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  .form-log {
+    margin-bottom: 15px;
+  }
+  .form-log label {
+    display: block;
+    margin-bottom: 5px;
+    color: black;
+    font-size: 14px;
+  } 
+  .form-log input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+  .forgot-password {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .forgot-password a {
+    font-size: 13px;
+    color: black;
+    text-decoration: none;
+  }
+  .forgot-password a:hover {
+    text-decoration: underline;
+  }
+  .divider {
+    margin: 15px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+  }
+  .butter {
+    width: 100%;
+    padding: 10px;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+    background-color:palevioletred;
+  }
+  .butter:hover {
+    background:pink;
+    transform: scale(1.1);
+  }
+  .social-log {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .signin {
+    text-align: center;
+    margin-top: 15px;
+    color: black;
+  }
+  .signin a {
+    color: rgb(231, 20, 90);
+    text-decoration: none;
+    font-weight: bold;
+  }
+</style>
+<body>
+  <div class="container">
+    <img src="1.webp" class="bg" alt="">
+    <form>
+      <h2>LOGIN</h2>
+      <p class="bio">Welcome back!</p>
+
+      <div class="form-log">
+        <label>Email or Username</label>
+        <input type="text" placeholder="Enter your email or username" required>
+      </div>
+
+      <div class="form-log">
+        <label>Password</label>
+        <input type="password" placeholder="Enter your password" required>
+      </div>
+
+      <button type="button" class="butter" onclick="window.location.href='home.html'">Login</button>
+
+      <div class="forgot-password">
+        <a href="forgot.html">Forgot Password?</a>
+      </div>
+
+      <hr class="divider">
+
+<p style="text-align:left; color:black; margin-bottom:10px;">
+  Connect with:
+</p>
+
+<div style="display:flex; justify-content:center; gap:20px; margin-bottom:15px;">
+  <a href="https://www.facebook.com/login.php" target="_blank">
+    <img src="facebook-logo.png" 
+         alt="Facebook" 
+         style="width:40px; height:40px; border-radius:50%; cursor:pointer;">
+  </a>
+<a href="https://accounts.google.com/" target="_blank">
+  <img src="google-logo-png-removebg-preview.png" 
+       alt="Google" 
+       style="width:40px; height:40px; border-radius:50%; cursor:pointer;">
+</a>
+<a href="https://github.com/login" target="_blank">
+  <img src="github_PNG40.png" 
+       alt="Google" 
+       style="width:45px; height:45px; border-radius:50%; cursor:pointer;">
+</a>
+</div>
+      <div class="signin">
+        Don’t have an account? <a href="Sign_up.html">Sign Up</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SHE IS WTH JESUS</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: url("free.jpg") center/cover no-repeat fixed;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem 2rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    .logo img {
+      width: 150px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      margin-right: 30px;
+    }
+
+    nav ul li a {
+      color: black;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.7rem 1.2rem;
+      border-radius: 4px;
+      transition: background 0.3s, transform 0.3s;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      display: inline-block;
+    }
+
+    nav ul li a:hover {
+      background: pink;
+      transform: scale(1.1);
+    }
+
+    #menu-toggle {
+      display: none;
+    }
+
+    .menu-btn {
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      background: #ff69b4;
+      border-radius: 10px;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: transparent;
+        width: 200px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out, background 0.3s ease;
+        text-align: center;
+        padding: 0;
+      }
+
+      #menu-toggle:checked ~ ul {
+        max-height: 500px;
+        background: pink;
+        padding: 0.8rem 0;
+      }
+
+      nav ul li a {
+        padding: 1rem;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+    }
+
+    .features-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      justify-items: center;
+    }
+
+    .card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: rgba(255, 240, 246, 0.95);
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 100%;
+      max-width: 500px;
+      border-top: 4px solid #ff69b4;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      margin-bottom: 0.75rem;
+    }
+
+    .card h3 {
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #ff69b4;
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+  .logo img {
+    width: 120px;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .logo img {
+    width: 90px;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    gap: 1rem;
+  }
+
+  nav ul li a {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  nav ul {
+    gap: 0.5rem;
+  }
+
+  nav ul li a {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    font-size: 1.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .menu-btn {
+    font-size: 1.5rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">
+      <img src="hh.png" alt="Site Logo">
+    </div>
+
+    <label for="menu-toggle" class="menu-btn">☰</label>
+    <input type="checkbox" id="menu-toggle">
+
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="lesson.html">Lesson</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="features-section">
+    <div class="container">
+      <div class="grid">
+        <a href="devotion.html" class="card">
+          <img src="How To Really Love Yourself/1.jpg" alt="Devotion">
+          <h3>LESSON 1</h3>
+          <p>SELF LOVE, Is it wrong or it okay?</p>
+        </a>
+
+        <a href="bible.html" class="card">
+          <img src="Returning To Our First Love/1.jpg" alt="Responsive">
+          <h3>LESSON 2</h3>
+          <p>THE LOVER AND THE BELOVED</p>
+        </a>
+
+        <a href="verse.html" class="card">
+          <img src="What The Church Needs Now/1.jpg" alt="Modern">
+          <h3>LESSON 3</h3>
+          <p>The Necessity of Love </p>
+        </a>
+
+        <a href="topic.html" class="card">
+          <img src="THE HEART OF THE MATTER… IS THE MATTER OF THE HEART/1.jpg" alt="Modern">
+          <h3>LESSON 4</h3>
+        <p>What is it in us that God is really concerned about?</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
